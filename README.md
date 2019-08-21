@@ -1,7 +1,5 @@
 # Beauty-Salon
-a web page for a beauty salon company.
-
-Click images to view web pages.
+A web page for a beauty salon company.
 
 Pages contain front end code. Links and forms are not connected to any back-end languages/databases.
 
