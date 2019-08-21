@@ -10,7 +10,10 @@ a {
     text-decoration: none;
 }
 body {
-    font-family: Montserrat, sans-serif
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 .section-background {
     background: linear-gradient(360deg, rgba(117,134,153,.2) 55%,rgba(133, 65, 110, 0.6) 100%), url(public/images/main-img.jpg) no-repeat center center fixed; 
@@ -97,6 +100,14 @@ nav {
 -moz-box-shadow: 1px -20px 29px 6px rgba(240,57,240,0.38);
 box-shadow: 1px -20px 29px 6px rgba(240,57,240,0.38);
 }
+@media (max-width: 650px) {
+    nav ul li {
+        display: none;
+    }
+    .sticky, .brand-link, .nav-links ul li a {
+        display: none;
+    }
+}
 .nav-container {
     width: 100%;
     height: 100px;
@@ -173,7 +184,7 @@ box-shadow: 1px -20px 29px 6px rgba(240,57,240,0.38);
 .services p {
     display: block;
     text-align: center !important;
-    font-size: 13px;
+    font-size: 1rem;
     color: #808080;
     display: block;
     margin-top: 0;
@@ -188,18 +199,28 @@ box-shadow: 1px -20px 29px 6px rgba(240,57,240,0.38);
 }
 
 .service-cards {
-    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
     padding-left: 15px;
     padding-right: 15px;
     font-family: Montserrat, sans-serif;
-    width: 100%;
+    width: 33.33%;
+    height: 45%;
     background: rgb(255, 255, 255);
+}
+@media (max-width: 650px) {
+    .services {
+        display: none;
+    }
 }
 .staff-section {
     width: 100%;
     position: relative;
-    background: #faf9f9;;
-    padding: 70px;
+    background: #faf9f9;
+    padding: 90px;
 }
 .staff-card-container {
     display: flex;
@@ -284,9 +305,540 @@ box-shadow: 1px -20px 29px 6px rgba(240,57,240,0.38);
     color: #cccccc;
 }
 .staff-text p {
-    font-size: 1.1vw;
+    font-size: 13px;
     color: #808080;
     display: inline-block;
     word-break: normal;
     margin-top: 15px;
 }
+.discount-div {
+    background: url(public/images/discount-img.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    height: 550px;
+    /* padding-top: 80px; */
+    color: white;
+    overflow: hidden;
+    z-index: 100;
+    font-family: Montserrat, sans-serif;
+
+}
+.student-discount {
+    margin-top: 110px;
+    margin-right: 30px;
+    width: 38%;
+    float: right;
+    padding: 15px;
+}
+.student-discount h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+.student-discount h2 {
+    margin-top: 15px;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.student-discount p {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* Student Discount Button */
+.student-discount .section-btn {
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: .95rem;
+    color: white;
+    margin-top: 25px ;
+    padding: 19px 20px;
+    background: none;
+    border: 1px solid rgb(247, 249, 252, .6);
+    border-radius: 25px;
+    opacity: .9;
+}
+.student-discount .section-btn:hover {
+    color: violet;
+    background-color: white;
+    transition: .3s ease-in-out;
+}
+.ourwork-section {
+    padding: 78px;
+    width: 100%;
+    position: relative;
+}
+.ourwork-header {
+    font-family: Montserrat, sans-serif;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+.ourwork-header h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+@media (max-width: 650px) {
+    .ourwork-header h2 {
+        /* margin-left: 15px; */
+        margin-left: 18px;
+    }
+}
+.ourwork-header p {
+    font-size: 14px;
+    color: #808080;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    display: block;
+    line-height: 1.8;
+    text-align: center;
+}
+.ourwork-img-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.ourwork-img-1 {
+    background: url(public/images/ourwork-img-1.png) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 25%;
+    max-width: 100%;
+    height: 450px;
+    display: inline-block;
+    margin: 15px;
+}
+@media (max-width: 700px) {
+    .ourwork-img-1 {
+        width: 100%;
+        height: 2.5rem;
+    }
+
+}
+.ourwork-img-2 {
+    background: url(public/images/ourwork-img-2.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 25%;
+    max-width: 100%;
+    height: 450px;
+    display: inline-block;
+    margin: 15px;
+}
+.ourwork-img-3 {
+    background: url(public/images/ourwork-img-3.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 25%;
+    max-width: 100%;
+    height: 450px;
+    display: inline-block;
+    margin: 15px;
+}
+.partners {
+    width: 100%;
+    height: 170px;
+    background: #faf9f9;
+    text-align: center;    
+}
+.partners img {
+    height: 110px;
+    margin: 35px auto;
+}
+.pricing {
+    width: 100%;
+    padding: 7em 0;
+}
+@media (max-width: 650px) {
+    .pricing li {
+        color: black;
+        background: white;
+    }
+}
+.price-card-wrapper {
+    width: 100%;
+    text-align: center;
+}
+.pricing-header {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    padding:  0 20px;
+    font-family: Montserrat, sans-serif;
+}
+section p .number {
+    color: violet;
+    font-weight: 600;
+    font-size: 20px;
+}
+section p .span2 {
+    font-size: 12px;
+    color: #bfbfbf;
+}
+.pricing-header h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.pricing-header p {
+    font-size: 14px;
+    color: #808080;
+    width: 80%;
+    margin: 25px auto;
+    display: block;
+    line-height: 1.8;
+    text-align: center;
+}
+.price-card {
+    display: inline-block;
+    border: 1px solid #f0f0f0;
+    width: 18%;
+    height: 450px;
+    font-family: Montserrat, sans-serif;
+    margin-top: 70px;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-around;
+}
+/* .price-card:hover {
+    border: 1px solid violet;
+} */
+.price-card-top {
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+}
+.price-card-top h3 {
+    text-transform: uppercase;
+}
+.price-card-top p {
+    margin-top: 28px;
+}
+section ul {
+    margin-top: 15px;
+}
+section li {
+    background: white;
+    color: #808080;
+    opacity: .7;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+section li:nth-child(odd) {
+    background: #FAFAFA;
+}
+.pricing-btn-wrapper {
+    width: 100%;
+    height: 40px;
+}
+.pricing-btn {
+    color: #CCCCCC;
+    background: #fff;
+    font-size: 13px;
+    float: left;
+    clear: both;
+    padding: 19px 20px;
+    border: 1px solid #CCCCCC;    
+    border-radius: 25px;
+    position: relative;
+    top: 1.6vw;
+    left: 4.7vw;
+    width: 8vw;
+    /* width: 52%; */
+}
+.pricing-btn:hover {
+    color: #fff;
+    background: #fa5bdd;
+}
+.appt {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    background: #fa5bdd;
+    color: white;
+    padding: 70px;
+    font-family: Montserrat, sans-serif;
+}
+.address-section {
+    width: 27%;
+    height: auto;
+    /* padding: 50px 15px; */
+    position: relative;
+    left: 180px;
+    background: #FB6CE0;
+    display: inline-block;
+    box-shadow: 0px 5px 71px -27px rgba(0, 0, 0, 0.21);
+}
+.info {
+    margin: 60px;
+    text-align: center;
+    line-height: 1.8;
+}
+.info h3 {
+    font-size: 19px;
+    margin-top: 25px;
+}
+.info p {
+    font-size: 13px;
+    margin-top: 15px;
+}
+.info span {
+    font-size: 13px;
+}
+form {
+    display: inline-block;
+    width: 40%;
+    padding: 15px;
+    height: auto;
+}
+form .form-wrapper {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-left: 50px;
+}
+form .input-form-control {
+   
+}
+form h3 {
+    font-size: 28px;
+}
+
+form label {
+    float: left;
+    margin-top: 40px;
+    font-size: 13px;
+    display: block;
+}
+form input {
+    background: none;
+    color: white;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    /* float: left; */
+    display: inline-block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+@media (max-width: 650px) {
+    form input {
+        width: 100px;
+    }
+}
+form input:focus {
+    background: #fb6ce0;
+}
+form button {
+    display: inline-block;
+}
+form .section-btn {
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: .95rem;
+    color: white;
+    margin-top: 20px;
+    padding: 20px 25px;
+    background: none;
+    border: 1px solid rgb(247, 249, 252, .6);
+    border-radius: 25px;
+    opacity: .9;
+}
+form .section-btn:hover {
+    color: violet;
+    background-color: white;
+    transition: .3s ease-in-out;
+}
+footer {
+    background: #252525;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding: 100px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+footer h2 p ul li a {
+    display: inline-block;
+} 
+
+footer .aboutus ul li {
+    display: inline-block;
+    margin: 10px;
+    float: left;
+}
+footer .spacing {
+    width: 25%;
+    line-height: 1.6;
+    text-align: center;
+    margin: 85px auto;
+    height: auto;
+    float: left;
+}
+footer .icons-wrapper {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+footer .icons {
+    text-align: center;
+}
+footer .fa {
+   font-size: 45px;
+   color: #FB6CE0;
+}
+footer .spa-center {
+    line-height: 1.5;
+}
+footer h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    line-height: 3.2;
+    
+}
+footer p {
+    font-size: 16px;
+    margin-top: 25px;
+}
+footer li {
+    font-size: 16px;
+    margin-top: 25px;
+}
+footer .q-div {
+    margin-top: 30px;
+    text-align: center;
+}
+footer span {
+    margin-top: 40px;
+}
+footer span .fa {
+    display: inline-block;
+    font-size: 21px;
+}
+
+footer .footer-icon {
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+footer .text {
+    margin-left: 18px;
+    /* margin-top: 25px;
+    padding: 10px; */
+}
+footer .phone {
+    margin-right: 27px; 
+}
+footer .fa-phone-square {
+    float: left;
+}
+footer .fa-envelope {
+    float: left;
+    margin-right: 20px;
+}
+footer span .email-add {
+    margin-right: 20px;
+}
+/* Mobile */
+@media only screen and (max-width: 650px) {
+    body {
+        background: black;
+        color: violet;
+    }
+    .sticky {
+        position: relative;
+        z-index: 100;
+    }
+    .service-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .staff-section {
+        display: none;
+    }
+    .student-discount {
+        height: auto;
+        text-align: center;
+        font-size: 17px;
+        margin-right: 30px;
+    }
+    .student-discount h2 {
+        font-size: 16px;
+    }
+    .student-discount p {
+        font-size: 1em;
+    }
+    .ourwork-img-1, .ourwork-img-2, .ourwork-img-3 {
+        width: 150px;
+        height: 190px;
+    }
+    .partners {
+        display: none;
+    }
+    .partners img {
+        display: none;
+    }
+    .price-card {
+        height: 160px;
+        width: 180px;
+    }
+    .price-card-top {
+        width: 17px;
+        text-align: center;
+        border: none;
+    }
+    .price-card ul {
+        margin-top: 0;
+    }
+    .price-card li {
+        padding: 19px;
+    }
+    .pricing-btn {
+        display: none;
+    }
+    .appt {
+        width: 40%;
+        background: black;
+    }
+    .address-section {
+        display: none;
+    }
+    form {
+        width: 20%;
+        display: inline-block;
+        background: black;
+    }
+ 
+    }
