@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 }
 .section-background {
-    background: linear-gradient(360deg, rgba(117,134,153,.2) 55%,rgba(133, 65, 110, 0.6) 100%), url(/images/main-img.jpg) no-repeat center center fixed; 
+    background: linear-gradient(360deg, rgba(117,134,153,.2) 55%,rgba(133, 65, 110, 0.6) 100%), url(/public/images/main-img.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
